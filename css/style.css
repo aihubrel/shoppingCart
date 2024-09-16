@@ -14,7 +14,11 @@ body {
     border-radius: 5px;
 }
 
-
+.main img{
+    width: 170px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
 
 .newItem {
     width: 60%;
