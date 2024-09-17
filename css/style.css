@@ -1,28 +1,60 @@
 body {
-     text-align: center;
-   
+    text-align: center;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-color:rgba(255,255,255,0.6);
+    background-blend-mode:lighten;
 }
 
 .items {
-    width: 60%;
-    margin: auto;
+   width: 60%;
+   margin: auto;
 }
 .main {
-    padding-top: 5px;
-    height: 250px;
-    border: 1.5px rgb(70, 59, 59) solid;
-    border-radius: 5px;
+   padding-top: 5px;
+   height: 250px;
+   border: 1.5px rgb(70, 59, 59) solid;
+   border-radius: 5px;
+   background-color: rgba(240, 248, 255, 0.574);
 }
 
-.main img{
-    width: 170px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+.quantity {
+   width: 50%;
+}
+.itemName {
+   font-size: larger;
+   font-weight: bold;
+}
+
+.close {
+   color: blue;
+}
+.subtotal {
+   font-weight: bold;
+}
+
+.main img, #last img{
+   width: 170px;
+   margin-bottom: 10px;
+   border-radius: 5px;
 }
 
 .newItem {
-    width: 60%;
-    margin-top: 10px;
-    margin: auto;
-    text-align: left;
+   width: 60%;
+   margin-top: 10px;
+   margin: auto;
+   text-align: left;
+}
+
+#alart {
+   position: relative;
+   top:-100px;
+   color: rgb(0, 0, 0);
+   text-align: center;
+   font-weight: bold;
+   font-size: larger;
+   background-color: rgb(251, 129, 129);
+   border-radius: 15px;
+   width: 30%;
+   margin: auto;
 }

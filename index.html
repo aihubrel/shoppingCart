@@ -17,90 +17,95 @@
   </head>
   <body id="background">
       <h1>SHOPPING CART</h1>
-     
+      <section>
+        <h3>Your Total is: $<span id="total">0.00</span> </h3>
+      </section>
+
+
       <div class="container-fluid ">
         <div class="row items">
-            <div class="main col-6 col-md-3 tomato">
-              <p class="itemName" style="display: inline">Tomato</p>
-              <button id="tomato" class="close" style="display: inline" onclick="close(this.id)">&#x1F5D9</button>
-              <br>
-              <img src="images/tomato.jpg">
-              <p>Price: <span class="item-price" id="tomatoPrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" class ="quantity" id="tomatoQty" name="tomatoQty" min="0" max="100" value ="0"/></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="tomatoSub">0.00</span></p>
-            </div>
-  
-            <div class="main col-6 col-md-3 lettuce">
-              <p class="itemName" style="display: inline">Lettuce</p>
-              <button id = "lettuce" class="close" style="display: inline">&#x1F5D9</button>
-              <br>
-              <img src="images/lettuce.jpg">
-              <p>Price: <span class="item-price" id="lettucePrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" id="lettuceQty" name="lettuceQty" min="0" max="100" value ="0"/></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="lettuceSub">0.00</span></p>
-            </div>
-  
-            <div class="main col-6 col-md-3 potato">
-              <p class="itemName" style="display: inline">Potato</p>
-              <button id = "potato" class="close" style="display: inline">&#x1F5D9</button>
-              <br>
-              <img src="images/potato.jpg">
-              <p>Price: <span class="item-price" id="potatoPrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="potatoQty" name="potatoQty" min="0" max="100" value ="0" /></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="potatoSub">0.00</span></p>
-            </div>
-  
-            <div class="main col-6 col-md-3 paprika">
-              <p class="itemName" style="display: inline">Paprika</p>
-              <button id = "paprika" class="close" style="display: inline">&#x1F5D9</button>
-              <br>
-              <img src="images/paprika.jpg">
-              <p>Price: <span class="item-price" id="paprikaPrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="paprikaQty" name="paprikaQty" min="0" max="100" value ="0"/></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="paprikaSub">0.00</span></p>
-            </div>
-  
-            <div class="main col-6 col-md-3 orange">
-              <p class="itemName" style="display: inline">Orange</p>
-              <button id="orange" class="close" style="display: inline">&#x1F5D9</button>
-              <br>
-              <img src="images/orange.jpg">
-              <p>Price: <span  class="item-price" id="orangePrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"   class ="quantity"type="number" id="orangeQty" name="orangeQty" min="0" max="100" value ="0"/></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="orangeSub">0.00</span></p>
-            </div>
-  
-            <div class="main col-6 col-md-3 strawberry">
-              <p class="itemName" style="display: inline">Strawberry</p>
-              <button id="strawberry" class="close" style="display: inline">&#x1F5D9</button>
-              <br>
-              <img src="images/strawberry.jpg">
-              <p>Price: <span  class="item-price" id="strawberryPrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="strawberryQty" name="strawberryQty" min="0" max="100" value ="0"/></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="strawberrySub">0.00</span></p>
-            </div>
-  
-            <div class="main col-6 col-md-3 pineapple">
-              <p class="itemName" style="display: inline">Pineapple</p>
-              <button id = "pineapple" class="close" style="display: inline">&#x1F5D9</button>
-              <br>
-              <img src="images/pineapple.jpg">
-              <p>Price: <span class="item-price" id="pineapplePrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="pineappleQty" name="pineappleQty" min="0" max="100" value ="0"/></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="pineappleSub">0.00</span></p>
-            </div>
-  
-            <div class="main col-6 col-md-3 grapes">
-              <P class="itemName" style="display: inline">Grapes</P>
-              <button id= "grapes" class="close" style="display: inline">&#x1F5D9</button>
-              <br>
-              <img src="images/grapes.jpg">
-              <p>Price: <span class="item-price" id="grapePrice"></span></p>
-              <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="grapeQty" name="grapeQty" min="0" max="100" value ="0"/></p>
-              <p>SUBTOTAL:<span class = "subtotal" id="grapeSub">0.00</span></p>
-            </div>
-            <div id="last"></div>
-           </div>
+          <div class="main col-6 col-md-3 tomato">
+            <p class="itemName" style="display: inline">Tomato</p>
+            <button id="tomato" class="close" style="display: inline" onclick="close(this.id)">&#x1F5D9</button>
+            <br>
+            <img src="images/tomato.jpg">
+            <p>Price: <span class="item-price" id="tomatoPrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" class ="quantity" id="tomatoQty" name="tomatoQty" min="0" max="100" value ="0"/></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="tomatoSub">0.00</span></p>
+          </div>
+
+          <div class="main col-6 col-md-3 lettuce">
+            <p class="itemName" style="display: inline">Lettuce</p>
+            <button id = "lettuce" class="close" style="display: inline">&#x1F5D9</button>
+            <br>
+            <img src="images/lettuce.jpg">
+            <p>Price: <span class="item-price" id="lettucePrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" id="lettuceQty" name="lettuceQty" min="0" max="100" value ="0"/></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="lettuceSub">0.00</span></p>
+          </div>
+
+          <div class="main col-6 col-md-3 potato">
+            <p class="itemName" style="display: inline">Potato</p>
+            <button id = "potato" class="close" style="display: inline">&#x1F5D9</button>
+            <br>
+            <img src="images/potato.jpg">
+            <p>Price: <span class="item-price" id="potatoPrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="potatoQty" name="potatoQty" min="0" max="100" value ="0" /></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="potatoSub">0.00</span></p>
+          </div>
+
+          <div class="main col-6 col-md-3 paprika">
+            <p class="itemName" style="display: inline">Paprika</p>
+            <button id = "paprika" class="close" style="display: inline">&#x1F5D9</button>
+            <br>
+            <img src="images/paprika.jpg">
+            <p>Price: <span class="item-price" id="paprikaPrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="paprikaQty" name="paprikaQty" min="0" max="100" value ="0"/></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="paprikaSub">0.00</span></p>
+          </div>
+
+          <div class="main col-6 col-md-3 orange">
+            <p class="itemName" style="display: inline">Orange</p>
+            <button id="orange" class="close" style="display: inline">&#x1F5D9</button>
+            <br>
+            <img src="images/orange.jpg">
+            <p>Price: <span  class="item-price" id="orangePrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"   class ="quantity"type="number" id="orangeQty" name="orangeQty" min="0" max="100" value ="0"/></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="orangeSub">0.00</span></p>
+          </div>
+
+          <div class="main col-6 col-md-3 strawberry">
+            <p class="itemName" style="display: inline">Strawberry</p>
+            <button id="strawberry" class="close" style="display: inline">&#x1F5D9</button>
+            <br>
+            <img src="images/strawberry.jpg">
+            <p>Price: <span  class="item-price" id="strawberryPrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="strawberryQty" name="strawberryQty" min="0" max="100" value ="0"/></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="strawberrySub">0.00</span></p>
+          </div>
+
+          <div class="main col-6 col-md-3 pineapple">
+            <p class="itemName" style="display: inline">Pineapple</p>
+            <button id = "pineapple" class="close" style="display: inline">&#x1F5D9</button>
+            <br>
+            <img src="images/pineapple.jpg">
+            <p>Price: <span class="item-price" id="pineapplePrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="pineappleQty" name="pineappleQty" min="0" max="100" value ="0"/></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="pineappleSub">0.00</span></p>
+          </div>
+
+          <div class="main col-6 col-md-3 grapes">
+            <P class="itemName" style="display: inline">Grapes</P>
+            <button id= "grapes" class="close" style="display: inline">&#x1F5D9</button>
+            <br>
+            <img src="images/grapes.jpg">
+            <p>Price: <span class="item-price" id="grapePrice"></span></p>
+            <p>QTY:<input  type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')"  class ="quantity" type="number" id="grapeQty" name="grapeQty" min="0" max="100" value ="0"/></p>
+            <p>SUBTOTAL:<span class = "subtotal" id="grapeSub">0.00</span></p>
+          </div>
+          <div id="last"></div>
+         </div>
+        </div>
         
         <div class="newItem">
           <h3>Add new item</h3>
@@ -109,6 +114,7 @@
           <label for="newItemPrice">Item Price:</label><br>
           <input type="number" id="newItemPrice" name="newItemPrice"  min="1" max="100" value="3.00" step="0.01">
           <button id="submit">Submit</button>
+          <div id="alart"></div>
         </div>
         
       </div>

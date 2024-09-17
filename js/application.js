@@ -92,9 +92,55 @@ $(document).ready (function(){
     })     
 });
 
+function remove(id) {
+ // var itemPrice =  Number($("#"+id+"Price").text().replace(/\$/,""));
+  for( var i = 0; i < itemName.length; i++){ 
+    if (itemName[i] == id) { 
+        itemName.splice(i,1);
+        eachPrice.splice(i,1); 
+    }                                                                                                                                                                                                                                                                                                                                                7
+  }
+  $('.'+id).remove();
+  calculateTotal();
+}
 
+$(document).ready (function(){
+    $("button#submit").unbind().click(function(){
+        newItemName = $('#newItemName').val();
+        newItemPrice = $('#newItemPrice').val();
+        priceId =  newItemName + "Price";
+        qtyId =  newItemName + "Qty";
+        subId = newItemName + "Sub";
 
+        if (checkDuplicate(newItemName) == false) {
+            $('#last').append(
+            '<div class="main '+ newItemName + ' col-6 col-md-3">' +
+              '<p class="itemName" style="display: inline">'+newItemName+'</p>' +
+              '<button id = "'+newItemName+'" class="close"  onclick="remove(this.id)" style="display: inline">&#x1F5D9</button>'+
+              '<br>' +
+              '<img src="images/default.jpg">' +
+              '<p >Price: $<span class="item-price" id="'+priceId+'">'+newItemPrice+'</span></p>' + 
+              '<p>QTY:<input type="text" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, "")"  class ="quantity" type="number" id="'+qtyId+'" name="'+qtyId+'" onkeyup="update(this.id)" min="0" max="100" value ="0"/></p>'+
+              '<p>SUBTOTAL:<span class = "subtotal" id="'+subId+'">0.00</span></p>'+
+            '</div>');    
+            eachPrice.push(newItemPrice);
+            itemName.push(newItemName);
+            $("#alart").html("");
+          } else {
+            $("#alart").html("The item is already exist."+"<br>"+"Please enter differnet item.");
+          }
+    })   
+});
 
+function update (id){
+    var itemName = id.substr(0, id.length-3);
+    newItemQty = parseFloat($('#'+ id).val());
+    priceId = itemName + "Price";
+    subId = itemName + "Sub";
+    newItemPrice = parseFloat($('#' + priceId).text());
+    var newItemTotal = (newItemQty  * newItemPrice).toFixed(2);
+    $("#"+subId).text(newItemTotal);
+}
 
 $(document).on('keyup', function() {
   calculateTotal();
@@ -110,5 +156,13 @@ function calculateTotal() {
   $('#total').text(total.toFixed(2));
 }
 
-
+function  checkDuplicate(newItem) {
+  var upperCaseItemName = newItem[0].toUpperCase() + newItem.slice(1);
+$("#test").html(newItem);
+ if (itemName.indexOf(newItem) == -1 && itemName.indexOf(upperCaseItemName) == -1 &&
+     itemName.indexOf(newItem.toLowerCase())==-1) {
+  return false;
+ }
+ return true;
+}
 
